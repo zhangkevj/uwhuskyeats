@@ -1,12 +1,6 @@
 <template>
   <div class="home">
-    <p class="ctr"><img
-        alt="roo logo"
-        src="../assets/roo.png"
-        style="border-radius: 500px;"
-      ></p>
-    <br>
-    <h1>Select a restaurant (loaded from server)</h1>
+    <h1>SELECT A RESTAURANT</h1>
     <div class="vendors">
       <b-card
         class="mb-4"

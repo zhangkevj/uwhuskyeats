@@ -1,16 +1,20 @@
+/* how to use fonts
+font-family: 'Encode Sans', sans-serif; ALL CAPS, for headers
+font-family: 'Open Sans', sans-serif; Normal or bold, for body text
+font-family: 'UniSansBook', Arial, sans-serif; ALL CAPS
+*/
+
 body,
 html,
 p,
 div,
 button,
 a {
-    font-family: "Inter", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 body,
 p,
-h1,
-h2,
 h3,
 h4,
 h5 {
@@ -19,18 +23,23 @@ h5 {
     -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+    font-family: 'Encode Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: 'UniSansBook', Arial, sans-serif;
+    text-transform: uppercase;
+}
+
 .card-text,
 .card-title {
     color: #111
 }
 
 body {
-    background-color: #000;
-    background-image: linear-gradient(315deg, rgba(72, 84, 97, 1), rgba(0, 0, 0, 0.8)), url(./backdrop.jpg);
-    background-size: cover, cover;
-    background-position: bottom right, bottom right;
-    min-height: 100vh;
-    height: 100%;
+    background-color: #4b2e83;
 }
 
 

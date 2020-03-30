@@ -3,9 +3,8 @@
     <b-navbar
       toggleable="lg"
       type="dark"
-      variant="dark"
     >
-      <b-navbar-brand to="/">dawgfood</b-navbar-brand>
+      <b-navbar-brand to="/"><img src="./assets/row-text.png" width=20% id="row"><img src="./assets/logo-gold.png" width=15% id="logo"></b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse
@@ -98,25 +97,62 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@900&family=Open+Sans:wght@400;700&display=swap');
+@font-face {
+    font-family: 'uni_sansbook';
+    src: url('assets/fonts/UniSansBook.woff2') format('woff2'),
+         url('assets/fonts/UniSansBook.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* how to use fonts
+font-family: 'Encode Sans', sans-serif; ALL CAPS, for headers
+font-family: 'Open Sans', sans-serif; Normal or bold, for body text
+font-family: 'UniSansBook', Arial, sans-serif;
+*/
+
 .apctr {
   margin-top: 2.5rem;
 }
 
 #app {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
+  font-family: 'Encode Sans', sans-serif;
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #85754d;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #ffffff;
     }
   }
+
+  a:hover {
+    color: #e8e3d3;
+  }
 }
+
+b-navbar {
+  background-color: #4b2e83;
+}
+
+#row {
+  display: block;
+}
+
+#logo {
+  display: none;
+}
+
+@media (max-width: 640px) and (min-width: 320px){
+  #row{
+   display:none;
+  }
+
+  #logo{
+   display:block;
+  }
+}
+
 </style>

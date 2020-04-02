@@ -1,6 +1,6 @@
 <template>
   <div class="register">
-    <h1>Register or <router-link :to="{name: 'Login'}">log in</router-link>
+    <h1>Register or <router-link :to="{name: 'Login'}" class="header-link">log in</router-link>
     </h1>
     <p>You can register a new account here. New personal users get a $5 signup bonus.</p>
 

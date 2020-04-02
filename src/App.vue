@@ -155,4 +155,9 @@ b-navbar {
   }
 }
 
+.header-link {
+  font-family: 'Encode Sans', sans-serif;
+  text-transform: uppercase;
+}
+
 </style>

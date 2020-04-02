@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-    <h1>Log in or <router-link :to="{name: 'Register'}">register</router-link></h1>
+    <h1>Log in or <router-link :to="{name: 'Register'}" class="header-link">register</router-link></h1>
     <p>Authentication is required to continue.</p>
 
     <b-form

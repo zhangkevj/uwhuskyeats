@@ -38,6 +38,10 @@
     <div class="container apctr">
       <router-view />
     </div>
+    <div id="footer">
+      <img src="./assets/logo-gold.png" width=40px>
+      <img src="./assets/row-text.png" height=20px id="row">
+    </div>
   </div>
 </template>
 
@@ -121,7 +125,7 @@ font-family: 'UniSansBook', Arial, sans-serif;
 
   a {
     font-weight: bold;
-    color: #85754d;
+    color: #b7a57a;
 
     &.router-link-exact-active {
       color: #ffffff;
@@ -129,7 +133,8 @@ font-family: 'UniSansBook', Arial, sans-serif;
   }
 
   a:hover {
-    color: #e8e3d3;
+    color: #85754d;
+    text-decoration: none;
   }
 }
 
@@ -160,4 +165,17 @@ b-navbar {
   text-transform: uppercase;
 }
 
+#footer {
+  text-align: center;
+  position: relative;
+  top: 150px;
+  bottom: 0;
+  width: 100%;
+}
+
+#footer img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
 </style>

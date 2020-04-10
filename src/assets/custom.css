@@ -26,11 +26,18 @@ h5 {
 h1 {
     font-family: 'Encode Sans', sans-serif;
     text-transform: uppercase;
+    font-size: 5em;
 }
 
 h2 {
     font-family: 'UniSansBook', Arial, sans-serif;
     text-transform: uppercase;
+    font-size: 2.5em;
+}
+
+h1, h2 {
+    padding-top: 25px;
+    padding-bottom: 10px;
 }
 
 .card-text,
@@ -46,9 +53,4 @@ body {
 .th-white,
 .td-white {
     color: #FFF
-}
-
-
-b-button {
-    background-color: #b7a57a;
 }

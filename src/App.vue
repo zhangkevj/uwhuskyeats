@@ -127,8 +127,13 @@ font-family: 'UniSansBook', Arial, sans-serif;
     font-weight: bold;
     color: #b7a57a;
 
+<<<<<<< HEAD
     &.dropdown-item.router-link-exact-active {
       background: #333; color: #ffffff;
+=======
+    &.router-link-exact-active {
+      color: #ffffff;
+>>>>>>> c1e1a518f375715247d7815589d36de6ca0cd64c
     }
   }
 

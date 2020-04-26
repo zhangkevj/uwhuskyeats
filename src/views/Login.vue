@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-    <h1>Log in or <router-link :to="{name: 'Register'}">register</router-link></h1>
+    <h1>Log in or <router-link :to="{name: 'Register'}" class="header-link">register</router-link></h1>
     <p>Authentication is required to continue.</p>
 
     <b-form
@@ -60,7 +60,7 @@ export default {
       params.append('password', this.pass)
 
       axios
-        .post("https://uwhuskyeats.herokuapp.com/auth/login", params, { withCredentials: true })
+        .post(window.BASEURL + "auth/login", params, { withCredentials: true })
         .then(response => {
           let d = response.data;
           if (d.error) {

@@ -1,16 +1,16 @@
 <template>
   <div class="wallet">
-    <h1>Vendor management</h1>
-    <p>This page is a WIP.</p>
-    <p>You have access to these vendor accounts:</p>
-    <ul>
-      <li
-        v-for="vendor in me"
-        v-bind:key="vendor.vendor_id"
-        class="white"
-      >
-        {{ vendor.business_name }} </li>
-    </ul>
+    <h1>{{ business.business.business_name }}</h1>
+    <h3>{{ business.business.business_desc }}</h3>
+
+    <hr>
+    <p>Available products:</p>
+    <slot v-if="business.products.length === 0"><span style="opacity:.7">&bull; No products found</span></slot>
+    <b-card v-else><b-table :fields="fields" :items="business.products">
+	<template v-slot:cell(buy)="data">
+            <router-link :to="`/purchase/${data.item.product_id}`">Buy product</router-link>
+        </template>
+    </b-table></b-card>
   </div>
 </template>
 
@@ -20,25 +20,22 @@ export default {
   name: "BusinessDashboard",
   data() {
     return {
-      me: []
+      fields: ['buy', 'item', 'cost'],
+      business: {}, me: {}
     };
   },
   components: {},
   mounted() {
-    if (this.$parent.user.account_type === "PERSONAL") {
-      this.$router.push({ name: "Home" });
-    }
-
-    this.fetchMyBusinesses();
+    this.fetchBiz();
   },
   methods: {
-    fetchMyBusinesses() {
+    fetchBiz() {
       axios
-        .get("https://uwhuskyeats.herokuapp.com/vendors/me", {
+        .get(window.BASEURL + "vendors/" + this.$route.params.vendor_id, {
           withCredentials: true
         })
         .then(response => {
-          this.me = response.data;
+          this.business = response.data;
         });
     }
   }

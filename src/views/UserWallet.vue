@@ -72,7 +72,7 @@ export default {
       const params = new URLSearchParams();
       params.append("amount", parseFloat(this.depositAmount));
       axios
-        .post("https://uwhuskyeats.herokuapp.com/wallet/deposit", params, {
+        .post(window.BASEURL + "wallet/deposit", params, {
           withCredentials: true
         })
         .then(response => {
@@ -87,7 +87,7 @@ export default {
     },
     fetchTransactions() {
       axios
-        .get("https://uwhuskyeats.herokuapp.com/wallet/txn", {
+        .get(window.BASEURL + "wallet/txn", {
           withCredentials: true
         })
         .then(response => {
@@ -96,7 +96,7 @@ export default {
     },
     fetchBalance() {
       axios
-        .get("https://uwhuskyeats.herokuapp.com/wallet/balance", {
+        .get(window.BASEURL + "wallet/balance", {
           withCredentials: true
         })
         .then(response => {

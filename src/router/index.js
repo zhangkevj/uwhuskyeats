@@ -6,6 +6,7 @@ import Register from '../views/Register.vue'
 import UserWallet from '../views/UserWallet.vue'
 import BusinessDashboard from '../views/BusinessDashboard.vue'
 import BusinessListing from '../views/BusinessListing.vue'
+import CheckoutPage from '../views/CheckoutPage.vue'
 
 Vue.use(VueRouter)
 
@@ -36,9 +37,14 @@ const routes = [
     component: BusinessDashboard
   },
   {
-    path: '/vendors/:vendor_id/:vendor_name',
+    path: '/merchants/:vendor_id/:vendor_name',
     name: 'BusinessListing',
     component: BusinessListing
+  },
+  {
+    path: '/purchase/:product_id',
+    name: 'CheckoutPage',
+    component: CheckoutPage
   },
   {
     path: '/about',

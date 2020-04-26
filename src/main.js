@@ -18,7 +18,6 @@ import './assets/custom.css'
 import VueSimpleAlert from "vue-simple-alert";
 Vue.use(VueSimpleAlert);
 Vue.use(require('vue-moment'));
-
 Vue.config.productionTip = false
 var mixin = {
   data: function () {
@@ -29,6 +28,8 @@ var mixin = {
     }
   }
 }
+
+window.BASEURL = (window.location.host == "uwhuskyeats.herokuapp.com" ? "https://uwhuskyeats.herokuapp.com/" : "http://localhost:8010/")
 
 new Vue({
   router,

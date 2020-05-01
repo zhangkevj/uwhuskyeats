@@ -14,10 +14,7 @@ a {
 }
 
 body,
-<<<<<<< HEAD
-=======
 p,
->>>>>>> c1e1a518f375715247d7815589d36de6ca0cd64c
 h3,
 h4 {
     color: #FFF;
@@ -25,13 +22,6 @@ h4 {
     -moz-osx-font-smoothing: grayscale;
 }
 
-<<<<<<< HEAD
-.encode-sans {
-    font-family: 'Encode Sans', sans-serif;
-}
-
-=======
->>>>>>> c1e1a518f375715247d7815589d36de6ca0cd64c
 h1 {
     font-family: 'Encode Sans', sans-serif;
     text-transform: uppercase;
